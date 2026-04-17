@@ -1,0 +1,67 @@
+:root {
+  --tech-dark: #0F172A;
+  --bio-green: #22C55E;
+  --soft-slate: #F8FAFC;
+}
+
+/* Hero compact pour le contraste Navbar */
+.assistance-hero {
+  background: linear-gradient(135deg, var(--tech-dark) 0%, #1E293B 100%);
+  padding: 120px 0 60px;
+  text-align: center;
+  color: white;
+}
+
+.support-badge {
+  background: rgba(34, 197, 94, 0.1);
+  color: var(--bio-green);
+  border: 1px solid var(--bio-green);
+  padding: 5px 15px;
+  border-radius: 4px;
+  font-size: 0.7rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* Formulaire Style "Dashboard" */
+.form-container-tech {
+  background: white;
+  margin-top: -50px; /* Chevauchement sur le hero */
+  border-radius: 0;
+  border: 1px solid #E2E8F0;
+  padding: 50px;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.08);
+}
+
+.tech-input {
+  background: var(--soft-slate);
+  border: 1px solid #E2E8F0;
+  border-radius: 0;
+  padding: 15px;
+  font-size: 0.95rem;
+  transition: all 0.3s;
+}
+
+.tech-input:focus {
+  background: white;
+  border-color: var(--bio-green);
+  box-shadow: none;
+}
+
+.btn-tech-submit {
+  background: var(--tech-dark);
+  color: white;
+  border: none;
+  border-radius: 0;
+  padding: 18px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: all 0.3s;
+}
+
+.btn-tech-submit:hover {
+  background: var(--bio-green);
+  transform: translateY(-2px);
+}

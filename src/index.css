@@ -1,0 +1,257 @@
+/* ═══════════════════════════════════════════════
+   WEMBE SARL — Typographie globale
+   Cormorant Garamond (titres) + Jost (corps)
+═══════════════════════════════════════════════ */
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600&family=Jost:wght@200;300;400;500;600&display=swap');
+
+/* ── VARIABLES ── */
+:root {
+  /* Familles */
+  --font-display: 'Cormorant Garamond', Georgia, serif; /* Titres, accroches */
+  --font-body:    'Jost', 'Segoe UI', sans-serif;       /* Corps, labels, boutons */
+
+  /* Tailles */
+  --text-xs:   0.70rem;   /* 11px — labels, mentions légales */
+  --text-sm:   0.82rem;   /* 13px — sous-titres, meta */
+  --text-base: 0.95rem;   /* 15px — corps de texte standard */
+  --text-md:   1.05rem;   /* 17px — intro, accroche courte */
+  --text-lg:   1.25rem;   /* 20px — chapeau, citation */
+  --text-xl:   1.6rem;    /* 26px — titre de section (h3) */
+  --text-2xl:  2.2rem;    /* 35px — titre de page (h2) */
+  --text-3xl:  3rem;      /* 48px — hero titre (h1) */
+  --text-4xl:  4rem;      /* 64px — hero grand format */
+
+  /* Poids */
+  --weight-light:   300;
+  --weight-regular: 400;
+  --weight-medium:  500;
+  --weight-semi:    600;
+  --weight-bold:    700;
+
+  /* Interlignage */
+  --leading-tight:  1.15;
+  --leading-snug:   1.35;
+  --leading-normal: 1.65;
+  --leading-loose:  1.85;
+
+  /* Espacement lettres */
+  --tracking-tight:  -0.01em;
+  --tracking-normal:  0em;
+  --tracking-wide:    0.06em;
+  --tracking-wider:   0.12em;
+  --tracking-widest:  0.22em;
+}
+
+/* ── RESET DE BASE ── */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  font-family: var(--font-body);
+  font-weight: var(--weight-light);
+  font-size: var(--text-base);
+  line-height: var(--leading-normal);
+  color: var(--text-dark, #1A0D04);
+  background-color: var(--wood-white, #FDFAF5);
+}
+
+/* ── TITRES ── */
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  font-weight: var(--weight-semi);
+  line-height: var(--leading-tight);
+  letter-spacing: var(--tracking-tight);
+  /* color: var(--wood-dark, #3B1F0A); */
+  margin-bottom: 0.5em;
+}
+
+h1 {
+  font-size: var(--text-3xl);
+  font-weight: var(--weight-light);
+  letter-spacing: -0.02em;
+}
+
+h2 {
+  font-size: var(--text-2xl);
+  font-weight: var(--weight-semi);
+}
+
+h3 {
+  font-size: var(--text-xl);
+  font-weight: var(--weight-medium);
+}
+
+h4 {
+  font-size: var(--text-lg);
+  font-weight: var(--weight-semi);
+  font-family: var(--font-body);
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+}
+
+h5 {
+  font-size: var(--text-md);
+  font-family: var(--font-body);
+  font-weight: var(--weight-medium);
+  letter-spacing: var(--tracking-wide);
+}
+
+h6 {
+  font-size: var(--text-sm);
+  font-family: var(--font-body);
+  font-weight: var(--weight-medium);
+  letter-spacing: var(--tracking-widest);
+  text-transform: uppercase;
+}
+
+/* ── CORPS DE TEXTE ── */
+
+p {
+  font-family: var(--font-body);
+  font-weight: var(--weight-light);
+  font-size: var(--text-base);
+  line-height: var(--leading-normal);
+  /* color: var(--text-mid, #4A2C10); */
+  margin-bottom: 1em;
+}
+
+
+/* Texte d'introduction (chapeau) */
+.lead {
+  font-family: var(--font-display);
+  font-size: var(--text-lg);
+  font-weight: var(--weight-light);
+  font-style: italic;
+  line-height: var(--leading-loose);
+  color: var(--wood-mid, #6B3A1F);
+}
+
+/* ── LIENS ── */
+
+a {
+  color: var(--wood-warm, #8B4513);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--wood-dark, #3B1F0A);
+}
+
+/* ── LABELS & OVERLINES ── */
+
+/* Ex : "NOS COLLECTIONS" au-dessus d'un titre */
+.overline {
+  font-family: var(--font-body);
+  font-weight: var(--weight-regular);
+  font-size: var(--text-xs);
+  letter-spacing: var(--tracking-widest);
+  text-transform: uppercase;
+  color: var(--wood-warm, #8B4513);
+  display: block;
+  margin-bottom: 0.6rem;
+}
+
+/* ── CITATIONS ── */
+
+blockquote {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: var(--text-lg);
+  font-weight: var(--weight-light);
+  line-height: var(--leading-loose);
+  color: var(--wood-mid, #6B3A1F);
+  border-left: 2px solid var(--wood-warm, #8B4513);
+  padding-left: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+/* ── BOUTONS (typographie) ── */
+
+button, .btn, input[type="submit"] {
+  font-family: var(--font-body);
+  font-weight: var(--weight-regular);
+  font-size: var(--text-sm);
+  letter-spacing: var(--tracking-wider);
+  text-transform: uppercase;
+}
+
+/* ── INPUTS & FORMULAIRES ── */
+
+input, textarea, select {
+  font-family: var(--font-body);
+  font-weight: var(--weight-light);
+  font-size: var(--text-base);
+}
+
+label {
+  font-family: var(--font-body);
+  font-weight: var(--weight-regular);
+  font-size: var(--text-sm);
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+}
+
+/* ── CLASSES UTILITAIRES ── */
+
+/* Familles */
+.font-display { font-family: var(--font-display) !important; }
+.font-body    { font-family: var(--font-body) !important; }
+
+/* Tailles */
+.text-xs   { font-size: var(--text-xs) !important; }
+.text-sm   { font-size: var(--text-sm) !important; }
+.text-base { font-size: var(--text-base) !important; }
+.text-md   { font-size: var(--text-md) !important; }
+.text-lg   { font-size: var(--text-lg) !important; }
+.text-xl   { font-size: var(--text-xl) !important; }
+.text-2xl  { font-size: var(--text-2xl) !important; }
+.text-3xl  { font-size: var(--text-3xl) !important; }
+.text-4xl  { font-size: var(--text-4xl) !important; }
+
+/* Poids */
+.font-light   { font-weight: var(--weight-light) !important; }
+.font-regular { font-weight: var(--weight-regular) !important; }
+.font-medium  { font-weight: var(--weight-medium) !important; }
+.font-semi    { font-weight: var(--weight-semi) !important; }
+.font-bold    { font-weight: var(--weight-bold) !important; }
+
+/* Style */
+.italic   { font-style: italic !important; }
+.not-italic { font-style: normal !important; }
+.uppercase { text-transform: uppercase !important; }
+.capitalize { text-transform: capitalize !important; }
+
+/* Tracking */
+.tracking-tight   { letter-spacing: var(--tracking-tight) !important; }
+.tracking-normal  { letter-spacing: var(--tracking-normal) !important; }
+.tracking-wide    { letter-spacing: var(--tracking-wide) !important; }
+.tracking-wider   { letter-spacing: var(--tracking-wider) !important; }
+.tracking-widest  { letter-spacing: var(--tracking-widest) !important; }
+
+/* Interlignage */
+.leading-tight  { line-height: var(--leading-tight) !important; }
+.leading-snug   { line-height: var(--leading-snug) !important; }
+.leading-normal { line-height: var(--leading-normal) !important; }
+.leading-loose  { line-height: var(--leading-loose) !important; }
+
+/* ── RESPONSIVE ── */
+
+
+
+@media (max-width: 480px) {
+  :root {
+    --text-3xl: 1.8rem;
+    --text-2xl: 1.45rem;
+  }
+}

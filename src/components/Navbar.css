@@ -1,0 +1,91 @@
+.okandjo-navbar {
+  transition: all 0.4s ease-in-out;
+  padding: 15px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Style quand on scrolle */
+.okandjo-navbar.scrolled {
+  background: rgba(2, 12, 27, 0.9); /* Bleu Nuit Profond */
+  backdrop-filter: blur(10px);
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(45, 184, 122, 0.2);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.nav-brand-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+}
+
+.nav-logo {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid var(--light-green);
+  object-fit: cover;
+}
+
+.nav-brand-text {
+  color: white;
+  font-weight: 800;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.nav-link-custom {
+  color: rgba(255, 255, 255, 0.8) !important;
+  font-weight: 500;
+  font-size: 0.9rem;
+  margin: 0 15px;
+  transition: color 0.3s;
+  position: relative;
+}
+
+.nav-link-custom:hover {
+  color: var(--light-green) !important;
+}
+
+/* Petite barre d'accentuation au hover */
+.nav-link-custom::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background-color: var(--light-green);
+  transition: width 0.3s;
+}
+
+.nav-link-custom:hover::after {
+  width: 100%;
+}
+
+.btn-nav-contact {
+  background: var(--light-green);
+  color: white !important;
+  padding: 8px 20px !important;
+  border-radius: 6px;
+  font-weight: 700;
+  margin-left: 20px;
+  transition: transform 0.2s;
+}
+
+.btn-nav-contact:hover {
+  transform: translateY(-2px);
+  background: #25a069 !important;
+}
+
+/* Mobile Toggler */
+.navbar-toggler {
+  border: none !important;
+  padding: 0;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+}
